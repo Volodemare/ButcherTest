@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf36ef0d405ab04cbd951b170e4051e, type: 3}
+  m_Name: Doors
+  m_EditorClassIdentifier: 
+  firstSoundList:
+  - {fileID: 8300000, guid: e163cb5e9330b6c4da3be73be85301ac, type: 3}
+  - {fileID: 8300000, guid: d8bd68df2361d55459259afd53271ae2, type: 3}
+  - {fileID: 8300000, guid: 84546914995e85141bb23cfdbebd69a1, type: 3}
+  - {fileID: 8300000, guid: e05bf17cc41c75442ba1feacabc3b40f, type: 3}
