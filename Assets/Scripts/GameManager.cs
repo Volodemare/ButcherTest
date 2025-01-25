@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         OnProgressChanged?.Invoke(_currentProgress / _maxProgress);
         if (_currentProgress <= 0)
         {
+            _currentProgress = 25f;
             LevelManager.Default.RestartLevel();
         }
     }
