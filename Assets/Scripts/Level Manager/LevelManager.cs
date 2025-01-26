@@ -138,10 +138,9 @@ namespace ButchersGames
 
         private void ClearChilds()
         {
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = transform.childCount - 1; i >= 0; i--)
             {
-                GameObject destroyObject = transform.GetChild(i).gameObject;
-                DestroyImmediate(destroyObject);
+                Destroy(transform.GetChild(i).gameObject);
             }
         }
     }

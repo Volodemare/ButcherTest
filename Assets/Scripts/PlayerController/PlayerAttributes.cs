@@ -11,6 +11,7 @@ public class PlayerAttributes : MonoBehaviour
     [SerializeField] private List<Mesh> _models = new List<Mesh>();
     [SerializeField] private MeshFilter playermodel;
     [SerializeField] private List<VisualEffect> _effects = new List<VisualEffect>();
+    [SerializeField] private PickupTextManager textManager;
 
     private int newModelId;
     private float prevA = 25f;
@@ -20,11 +21,17 @@ public class PlayerAttributes : MonoBehaviour
     {
         GameManager.Default.OnProgressChanged.AddListener(ChangeModel);
         GameManager.Default.OnProgressChanged.AddListener(MoneyEffect);
+        GameManager.Default.OnMoneyChanged.AddListener(MoneyVfx);
         playermodel.mesh = _models[currentModel];
     }
 
+    private void MoneyVfx(int amount)
+    {
+        textManager.ShowPickup(GameManager.Default.oldMoney);
+    }
     public void MoneyEffect(float a)
     {
+        
         if (a >= prevA)
         {
             Sounds.PlaySound(0);

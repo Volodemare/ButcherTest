@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text levelText;
     private float _currentProgress = 25f;
     private float _maxProgress = 99f;
+    public int oldMoney = 0;
+    
 
     public int TotalMoney {get{return _totalMoney;}}
     public float CurrentProgress {get{return _currentProgress;}}
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         _currentMoney = Mathf.Clamp(_currentMoney + amount, 0, int.MaxValue);
+        oldMoney = amount;
         OnMoneyChanged?.Invoke(_currentMoney);
     }
 
