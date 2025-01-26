@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         _gameStarted = true;
         StarterUI.GetComponent<Animator>().SetTrigger("Drop");
-        transform.Find("Girl").GetComponent<Animator>().SetBool("Started", true);
+        transform.Find("Girl").GetChild(0).GetComponent<Animator>().SetBool("Started", true);
         StartDragging();
     }
 
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!_gameStarted)
         {
-            transform.Find("Girl").GetComponent<Animator>().SetBool("Started", false);
+            transform.Find("Girl").GetChild(0).GetComponent<Animator>().SetBool("Started", false);
             return;
         }
 
